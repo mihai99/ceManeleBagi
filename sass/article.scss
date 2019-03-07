@@ -1,0 +1,115 @@
+.article
+{
+    width: calc(50% - 30px);
+
+    border: 2px solid black;    
+    border-radius: 10px;    
+    height: 300px;    
+    display: inline-table;    
+    margin: 10px;
+    min-width: 350px;
+    @media screen and (max-width:960px) {
+        width: 100%;
+        margin:0px;
+        margin-bottom:20px;
+        border:0px;
+    }
+    &-who
+    {
+       
+        width: 100%;
+
+        text-align: center;
+        
+        margin-top: -285px;
+        
+        height: 30px;
+        
+        color: white;
+        
+        font-weight: bold;
+    }
+    &-photo
+    {
+        float: left;
+        width:40%;
+        height: 100%;
+        img{
+            width: 100%;
+            height: 100%;
+        }
+        @media screen and (max-width:470px) {
+            float:none;
+            width: 85%;
+            max-height: 200px;
+        }   
+
+    }
+    &-right
+    {
+        @media screen and (max-width:470px) {
+            float:none;
+            width: 85%;
+            max-height: 200px;
+        }   
+        width:60%;
+        float:right;      
+        display: flex;
+        flex-direction: column;
+        p{
+            padding: 20px;
+            font-size: 20px;            
+            margin: 0;            
+            background:green;
+            height: 125px;
+        }
+        h3{
+            
+            font-size: 30px;
+            text-align: center;
+            max-height: 35px;
+            margin: 0;      
+            background: #20bd00;
+            padding-top: 20px;
+            padding-bottom: 10px;
+
+        }  
+    }
+    &-buttons{
+    background: #20bd00;
+    display: flex;
+    justify-content: center;
+    margin-top: 0px;
+
+        button{
+            margin: 10px;
+            min-width: 75px;
+            width:30%;
+            height:50px;
+        }
+        button:hover
+        {
+           
+            transition: border-width 0.5s ease-in;
+            transition: border-radius 0.5s ease-in;
+            border:5px solid black;
+            border-radius: 10px;
+            
+        }
+    }
+    &-like{
+        background: url("../img/buttonLike.jpg");
+        background-size:100% 100%;
+        
+        
+        
+    }
+    &-dislike{
+        background: url("../img/buttonDislike.jpeg");
+        background-size:100% 100%;
+       
+       
+        
+    }
+    
+}
